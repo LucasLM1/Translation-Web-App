@@ -1,12 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
-@import url("http://fonts.cdnfonts.com/css/hk-nova");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
-@import url("http://fonts.cdnfonts.com/css/hk-nova");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "HK Nova", "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   list-style: none;
 }
 
@@ -134,6 +130,7 @@ header img {
   .box-text-of, .box-text-to {
     border-bottom: 1px solid #0071bd;
     border-radius: 0;
+    color: #000;
   }
   .box-text-of::placeholder, .box-text-to::placeholder {
     color: #000;
@@ -248,6 +245,9 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  outline: none;
+  background: none;
   transition: 0.4s;
 }
 @media only screen and (min-width: 565px) and (max-width: 800px) {
@@ -308,6 +308,9 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  outline: none;
+  background: none;
   transition: 0.4s;
 }
 @media only screen and (min-width: 565px) and (max-width: 800px) {

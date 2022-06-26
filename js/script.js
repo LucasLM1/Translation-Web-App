@@ -4,12 +4,6 @@ toText = document.querySelector(".box-text-to");
 exchangeIcon = document.querySelector(".controls-exchange");
 translateButton = document.querySelector("button");
 icons = document.querySelectorAll(".row i");
-// icons = rows;
-
-// const rows = [
-//     document.querySelectorAll(".row-from i"),
-//     document.querySelectorAll(".row-to i")
-// ]
 
 selectTag.forEach((tag, id) => {
     for (const country_code in countries) {
@@ -77,18 +71,27 @@ icons.forEach(icon =>{
         if(target.classList.contains("fa-copy")){
             //Copiando ambos os textos para a área de transferência
             target.id == "from"?
-            navigator.clipboard.writeText(fromText.value) :navigator.clipboard.writeText(toText.value)
+            navigator.clipboard.writeText(fromText.value) : navigator.clipboard.writeText(toText.value);
         }else{
             let utterance;
-            if(target.id == "from"){
-                //Emitindo som...
-                utterance = new SpeechSynthesisUtterance(fromText.value);
-                utterance.lang = selectTag[0].value;
-            } else{
-                //Emitindo som...
-                utterance = new SpeechSynthesisUtterance(toText.value);
-                utterance.lang = selectTag[1].value;
-            }
+            let utterance1 = utterance.lang = selectTag[0].value;;
+            let utterance2 = utterance.lang = selectTag[1].value;
+
+            target.id == "from"?(
+            utterance = new SpeechSynthesisUtterance(fromText.value), utterance1
+            ) : (
+                utterance = new SpeechSynthesisUtterance(toText.value), utterance2
+            );
+            
+            // if(target.id == "from"){
+            //     //Emitindo som...
+            //     utterance = new SpeechSynthesisUtterance(fromText.value);
+            //     utterance.lang = selectTag[0].value;
+            // } else{
+            //     //Emitindo som...
+            //     utterance = new SpeechSynthesisUtterance(toText.value);
+            //     utterance.lang = selectTag[1].value;
+            // }
             speechSynthesis.speak(utterance);
         }
     });
