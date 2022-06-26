@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+@import url("http://fonts.cdnfonts.com/css/hk-nova");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+@import url("http://fonts.cdnfonts.com/css/hk-nova");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "HK Nova", "Roboto", sans-serif;
+  list-style: none;
+}
+
+body {
+  background: linear-gradient(45deg, #eb3a3a, #e93600, #073a74, #e93600, #eb3a3a);
+  background-size: 200% 200%;
+  animation: colors 10s ease infinite;
+  overflow-y: hidden;
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  body {
+    overflow-y: scroll;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  body {
+    overflow-y: scroll;
+  }
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-image: linear-gradient(45deg, #eb3a3a, #e93600, #073a74, #e93600, #eb3a3a);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(165, 131, 131, 0.3137254902);
+  border-radius: 100px;
+  border: 3px solid rgba(165, 131, 131, 0.3137254902);
+  transition: 1s;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #808080;
+  border: 3px solid #808080;
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+header {
+  display: flex;
+  margin: 15px 0 0 0;
+  justify-content: center;
+  color: #fff;
+}
+header img {
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: normal;
+  margin: 20px auto;
+  width: 75%;
+  background-color: rgba(165, 131, 131, 0.3137254902);
+  border-radius: 10px;
+  padding: 30px;
+}
+.container-wrapper {
+  border: 1px solid #0071bd;
+  border-radius: 5px;
+}
+.container button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.6s;
+}
+.container button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.box-text {
+  display: flex;
+  border-bottom: 1px solid #0071bd;
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .box-text {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  .box-text {
+    flex-direction: column;
+  }
+}
+.box-text-of, .box-text-to {
+  border: none;
+  outline: none;
+  background: none;
+  height: 250px;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  resize: none;
+  padding: 15px;
+}
+.box-text-of::placeholder, .box-text-to::placeholder {
+  color: #fff;
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .box-text-of, .box-text-to {
+    border-bottom: 1px solid #0071bd;
+    border-radius: 0;
+  }
+  .box-text-of::placeholder, .box-text-to::placeholder {
+    color: #000;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  .box-text-of, .box-text-to {
+    border-bottom: 1px solid #0071bd;
+  }
+  .box-text-of::placeholder, .box-text-to::placeholder {
+    color: #000;
+  }
+}
+.box-text-to {
+  border: none;
+  outline: none;
+  background: none;
+  border-left: 1px solid #0071bd;
+  border-radius: 0px;
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .box-text-to {
+    border-left: none;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  .box-text-to {
+    border: none;
+  }
+}
+
+.controls, .controls li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  .controls, .controls li {
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .controls, .controls li {
+    flex-flow: column;
+  }
+  .controls :last-of-type {
+    flex-flow: row-reverse !important;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  .controls, .controls li {
+    flex-flow: column;
+  }
+  .controls :last-of-type {
+    flex-flow: row-reverse !important;
+  }
+}
+.controls li {
+  flex-direction: row;
+}
+.controls li select {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  color: #000;
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  .controls li select {
+    font-size: 15px;
+  }
+}
+.controls .row-from-icons {
+  border-right: 1px solid #000;
+  padding-right: 15px;
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .controls .row-from-icons {
+    border: none;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  .controls .row-from-icons {
+    border: none;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .controls-from {
+    border-bottom: 1px solid #0071bd;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  .controls-from {
+    border: none;
+  }
+}
+.controls-from-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  width: 38%;
+}
+.controls-from-icons i {
+  color: #b1b1b1;
+  font-size: 14px;
+  cursor: pointer;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+@media only screen and (min-width: 565px) and (max-width: 800px) {
+  .controls-from-icons i {
+    color: #000;
+  }
+}
+.controls-from-icons i:hover {
+  color: #0071bd;
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .controls-from-icons i {
+    color: #000;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  .controls-from-icons i {
+    color: #000;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .controls .row-to {
+    border-top: 1px solid #0071bd;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  .controls .row-to {
+    border: none;
+  }
+}
+.controls .row-to-icons {
+  border-left: 1px solid #000;
+  padding-left: 15px;
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .controls .row-to-icons {
+    border: none;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  .controls .row-to-icons {
+    border: none;
+  }
+}
+.controls-to-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  width: 38%;
+}
+.controls-to-icons i {
+  color: #b1b1b1;
+  font-size: 14px;
+  cursor: pointer;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+@media only screen and (min-width: 565px) and (max-width: 800px) {
+  .controls-to-icons i {
+    color: #000;
+  }
+}
+.controls-to-icons i:hover {
+  color: #0071bd;
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .controls-to-icons i {
+    color: #000;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  .controls-to-icons i {
+    color: #000;
+  }
+}
+.controls-exchange {
+  color: #b1b1b1;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.controls-exchange:hover {
+  color: #0071bd;
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .controls-exchange {
+    width: 20%;
+    color: #000;
+    padding: 20px !important;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 470px) {
+  .controls-exchange {
+    color: #000;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+footer .constructed {
+  padding: 20px;
+}
+footer .constructed-by {
+  font-size: 16px;
+}
+footer .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+}
+footer .contact-networks {
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  margin: auto 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

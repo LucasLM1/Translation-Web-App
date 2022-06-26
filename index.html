@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas M. Souza">
+    <meta name="description" content="Aplicação web que realiza a tradução de textos para inúmeros idiomas, com a possibilidade de copiá-los para a área de transferência do usuário e os exibir forma sonora.
+    Topics
+    ">
+    <meta name="keywords" content="HTML, SCSS, CSS, JavaScript, API, Translator, Web">
+
+    <title>Translation Web App | By LM</title>
+    <link rel="icon" href="./img/LM-icon.jpg">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        Translation Web App | By 
+        <a href="https://www.linkedin.com/in/lucaslmsc/" target="_blank">
+            <img src="./img/LM-icon.jpg" alt="LM Icon">
+        </a>
+        
+    </header>
+
+    <main class="container">
+        <section class="container-wrapper">
+            <section class="box-text">
+                <textarea class="box-text-of" placeholder="Digite o texto"></textarea>
+                <textarea class="box-text-to" placeholder="Tradução" readonly disabled></textarea>
+            </section>
+    
+            <ul class="controls">
+                <li class="row row-from controls-from">
+                    <section class="row-from-icons controls-from-icons">
+                        <i id="from" class="fas fa-volume-up" title="Clique para ouvir o texto"></i>
+                        <i id="from" class="fas fa-copy" title="Clique para copiar o texto"></i>
+                    </section>
+
+                    <select></select>
+                </li>
+    
+                <li class="controls-exchange">
+                    <i class="fas fa-exchange-alt" title="Clique para inverter a ordem"></i>
+                </li>
+    
+                <li class="row row-to controls-to">
+
+                    <select></select>
+                    <section class=" row-to-icons controls-to-icons">
+                        <i id="to" class="fas fa-volume-up" title="Clique para ouvir o texto"></i>
+                        <i id="to" class="fas fa-copy" title="Clique para copiar o texto"></i>
+                    </section>
+                </li>
+            </ul>
+        </section>
+        <button>Traduzir texto</button>
+    </main>
+
+    <footer>
+        <section class="constructed">
+            <p class="constructed-by">Construído por Lucas Souza</p>
+        </section>
+
+        <section class="contact">
+            <a href="https://www.linkedin.com/in/lucaslmsc/" target="_blank">
+                <img class="contact-networks" src="./img/Linkedin.png">
+            </a>
+
+            <a href="https://github.com/LucasLM1" target="_blank">
+                <img class="contact-networks" src="./img/GitHub.png" alt="GitHub">
+            </a>
+        </section>
+    </footer>
+
+    <script src="./js/countries.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

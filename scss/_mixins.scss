@@ -1,0 +1,45 @@
+@import 'font';
+@import 'variables';
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin noneEffect{
+    border: none;
+    outline: none;
+    background: none;
+}
+
+@mixin sectionIconStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    width: 38%;
+}
+
+@mixin iconStyle{
+    color: $gray;
+    font-size: 14px;
+    cursor: pointer;
+    width: 50px;
+    @media only screen and (min-width: 565px) and (max-width: 800px){
+        color: $black;
+    }
+}
+
+@mixin response{
+    @media only screen and (min-width: 320px) and (max-width: 900px){
+        @content;
+    }
+}
+
+@mixin response-small-phone{
+    @media only screen and (min-width: 320px) and (max-width: 470px){
+        @content;
+    }
+}
